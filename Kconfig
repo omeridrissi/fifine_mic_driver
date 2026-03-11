@@ -1,0 +1,6 @@
+config FIFINE_MIC
+	tristate "Personal FIFINE mic driver project"
+	depends on USB
+	help
+	  No Help For You :)
+
