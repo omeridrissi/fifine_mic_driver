@@ -1,3 +1,12 @@
+/* SPDX-License-Identifier: GPL-2.0 */
+/*
+ * USB Fifine Mic driver
+ *
+ * Copyright (C) 2026 Omer El Idrissi (omer.e.idrissi@gmail.com)
+ *
+ * This driver is based on drivers/usb/usb-skeleton.c version 2.2
+ */
+
 #include <linux/kernel.h>
 #include <linux/usb.h>
 #include <linux/types.h>

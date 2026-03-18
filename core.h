@@ -1,3 +1,12 @@
+/* SPDX-License-Identifier: GPL-2.0 */
+/*
+ * USB Fifine Mic driver
+ *
+ * Copyright (C) 2026 Omer El Idrissi (omer.e.idrissi@gmail.com)
+ *
+ * This driver is based on drivers/usb/usb-skeleton.c version 2.2
+ */
+
 #include <linux/kernel.h>
 #include <linux/errno.h>
 #include <linux/slab.h>
@@ -8,19 +17,12 @@
 /* Get a minor range for your devices from the usb maintainer */
 #define usb_fifine_MINOR_BASE	192
 
-/* our private defines. if this grows any larger, use your own .h file */
-#define MAX_TRANSFER		(PAGE_SIZE - 512)
-/*
- * MAX_TRANSFER is chosen so that the VM is not stressed by
- * allocations > PAGE_SIZE and the number of packets in a page
- * is an integer 512 is the largest possible packet on EHCI
- */
 #define NUM_URBS 3
 /* arbitrarily chosen */
 
 #define NUM_ISO_PACKETS 8
 
-/* number of bytes to be written to ring buffer before being read by consumers */
+/* number of bytes transfered to userspace at a time (unless count is smaller) */
 #define CHUNK_SIZE 50
 
 /* number of chunks in our ring buffer (buffer size rounded up to power of 2) */
