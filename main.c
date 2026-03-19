@@ -249,7 +249,7 @@ static int fifine_probe(struct usb_interface *interface,
 				 &mute_val, 1, 1000);
 	if (retval < 0) {
 		dev_err(&interface->dev,
-			"Could not unmute this bih (retval %d)\n", retval);
+			"Could not unmute mic (retval %d)\n", retval);
 		goto error;
 	}
 
@@ -264,7 +264,7 @@ static int fifine_probe(struct usb_interface *interface,
 				 &vol, 2, 1000);
 	if (retval < 0) {
 		dev_err(&interface->dev,
-			"Could not set volume on this bih (retval %d)\n", retval);
+			"Could not set volume on mic (retval %d)\n", retval);
 		goto error;
 	}	
 
