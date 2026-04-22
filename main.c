@@ -387,4 +387,4 @@ module_usb_driver(fifine_driver);
 
 MODULE_LICENSE("GPL v2");
 MODULE_AUTHOR("Omer El Idrissi");
-MODULE_DESCRIPTION("Dumbahh high school dropout making toy driver for JMTek mic");
+MODULE_DESCRIPTION("Simple USB isochornous endpoint driver for Fifine Mic");
